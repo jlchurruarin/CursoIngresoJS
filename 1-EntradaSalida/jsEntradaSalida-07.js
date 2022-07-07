@@ -11,9 +11,11 @@ function sumar()
 	let suma;
 
 	numeroUno = document.getElementById("txtIdNumeroUno").value;
+	numeroUno = parseInt(numeroUno);
 	numeroDos = document.getElementById("txtIdNumeroDos").value;
+	numeroDos = parseInt(numeroDos);
 
-	suma = parseInt(numeroUno) + parseInt(numeroDos);
+	suma = numeroUno + numeroDos;
 
 	alert("La suma es: " + suma);
 }
@@ -25,9 +27,11 @@ function restar()
 	let resta;
 
 	numeroUno = document.getElementById("txtIdNumeroUno").value;
+	numeroUno = parseInt(numeroUno);
 	numeroDos = document.getElementById("txtIdNumeroDos").value;
+	numeroDos = parseInt(numeroDos);
 
-	resta = parseInt(numeroUno) - parseInt(numeroDos);
+	resta = numeroUno - numeroDos;
 
 	alert("La resta es: " + resta);	
 }
@@ -39,9 +43,11 @@ function multiplicar()
 	let multiplicacion;
 
 	numeroUno = document.getElementById("txtIdNumeroUno").value;
+	numeroUno = parseInt(numeroUno);
 	numeroDos = document.getElementById("txtIdNumeroDos").value;
+	numeroDos = parseInt(numeroDos);
 
-	multiplicacion = parseInt(numeroUno) * parseInt(numeroDos);
+	multiplicacion = numeroUno * numeroDos;
 
 	alert("La multiplicación es: " + multiplicacion);
 }
@@ -53,9 +59,11 @@ function dividir()
 	let division;
 
 	numeroUno = document.getElementById("txtIdNumeroUno").value;
+	numeroUno = parseInt(numeroUno);
 	numeroDos = document.getElementById("txtIdNumeroDos").value;
+	numeroDos = parseInt(numeroDos);
 
-	division = parseInt(numeroUno) / parseInt(numeroDos);
+	division = numeroUno / numeroDos;
 
 	alert("La división es: " + division);
 }

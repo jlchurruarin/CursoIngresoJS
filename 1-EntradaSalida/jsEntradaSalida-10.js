@@ -8,9 +8,16 @@ function mostrarAumento()
 {
 	let importeIngresado;
 	let resultado;
+	let porcentaje;
+	let descuento;
+
+	porcentaje = prompt("Ingrese el porcentaje de descuento:");
+	porcentaje = parseFloat(porcentaje);
 
 	importeIngresado = document.getElementById("txtIdImporte").value;
-	resultado = parseInt(importeIngresado) / 4; // Calculamos el 25% (100/25)
-	resultado = parseInt(importeIngresado) - resultado; // restamos el 25% al valor inicial
+	importeIngresado = parseFloat(importeIngresado);
+	descuento = porcentaje * importeIngresado / 100; // Calculamos el descuento
+	resultado = importeIngresado - descuento; // restamos el descuento al valor inicial
+
 	document.getElementById("txtIdResultado").value = resultado;
 }

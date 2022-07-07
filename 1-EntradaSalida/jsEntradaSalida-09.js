@@ -8,10 +8,16 @@ function mostrarAumento()
 {
 	let importeIngresado;
 	let resultado;
+	let porcentaje;
+	let aumento;
+
+	porcentaje = prompt("Ingrese el porcentaje de aumento");
+	porcentaje = parseFloat(porcentaje);
 
 	importeIngresado = document.getElementById("txtIdSueldo").value;
-	resultado = parseInt(importeIngresado) / 10; // Calculamos el 10%
-	resultado = resultado + parseInt(importeIngresado); // sumamos el 10% al valor inicial
+	importeIngresado = parseInt(importeIngresado);
+	aumento = porcentaje * importeIngresado / 100; 	// Calculamos el porcentaje
+	resultado = aumento + importeIngresado; 	// Sumamos el porcentaje al valor iniciar
 	document.getElementById("txtIdResultado").value = resultado;
 
 }
