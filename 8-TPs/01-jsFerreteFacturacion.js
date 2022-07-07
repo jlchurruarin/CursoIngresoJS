@@ -9,44 +9,6 @@ function Sumar ()
 	let precioProductoUno;
     let precioProductoDos;
     let precioProductoTres;
-    let suma;
-
-    precioProductoUno = document.getElementById("txtIdPrecioUno").value;
-    precioProductoUno = parseFloat(precioProductoUno);
-    precioProductoDos = document.getElementById("txtIdPrecioDos").value;
-    precioProductoDos = parseFloat(precioProductoDos);
-    precioProductoTres = document.getElementById("txtIdPrecioTres").value;
-    precioProductoTres = parseFloat(precioProductoTres);
-
-    suma = precioProductoUno + precioProductoDos + precioProductoTres;
-
-    alert("La suma es: $" + suma);
-
-}
-function Promedio () 
-{
-    let precioProductoUno;
-    let precioProductoDos;
-    let precioProductoTres;
-    let promedio;
-
-    precioProductoUno = document.getElementById("txtIdPrecioUno").value;
-    precioProductoUno = parseFloat(precioProductoUno);
-    precioProductoDos = document.getElementById("txtIdPrecioDos").value;
-    precioProductoDos = parseFloat(precioProductoDos);
-    precioProductoTres = document.getElementById("txtIdPrecioTres").value;
-    precioProductoTres = parseFloat(precioProductoTres);
-
-    promedio = (precioProductoUno + precioProductoDos + precioProductoTres) / 3;
-
-    alert("El promedio es: $" + promedio);
-}
-function PrecioFinal () 
-{
-
-    let precioProductoUno;
-    let precioProductoDos;
-    let precioProductoTres;
     let precioFinal;
 
     precioProductoUno = document.getElementById("txtIdPrecioUno").value;
@@ -57,7 +19,51 @@ function PrecioFinal ()
     precioProductoTres = parseFloat(precioProductoTres);
 
     precioFinal = precioProductoUno + precioProductoDos + precioProductoTres;
-    precioFinal = precioFinal * 1.21;
+
+    alert("La suma es: $" + precioFinal);
+
+}
+function Promedio () 
+{
+    let precioProductoUno;
+    let precioProductoDos;
+    let precioProductoTres;
+    let precioPromedio;
+
+    precioProductoUno = document.getElementById("txtIdPrecioUno").value;
+    precioProductoUno = parseFloat(precioProductoUno);
+    precioProductoDos = document.getElementById("txtIdPrecioDos").value;
+    precioProductoDos = parseFloat(precioProductoDos);
+    precioProductoTres = document.getElementById("txtIdPrecioTres").value;
+    precioProductoTres = parseFloat(precioProductoTres);
+
+    precioPromedio = (precioProductoUno + precioProductoDos + precioProductoTres) / 3;
+
+    alert("El promedio es: $" + precioPromedio);
+}
+function PrecioFinal () 
+{
+
+    let precioProductoUno;
+    let precioProductoDos;
+    let precioProductoTres;
+    let precioFinal;
+    let precioIva;
+    let porcentajeDeIva;
+
+    porcentajeDeIva = 21
+
+    precioProductoUno = document.getElementById("txtIdPrecioUno").value;
+    precioProductoUno = parseFloat(precioProductoUno);
+    precioProductoDos = document.getElementById("txtIdPrecioDos").value;
+    precioProductoDos = parseFloat(precioProductoDos);
+    precioProductoTres = document.getElementById("txtIdPrecioTres").value;
+    precioProductoTres = parseFloat(precioProductoTres);
+
+    precioFinal = precioProductoUno + precioProductoDos + precioProductoTres;
+    precioIva = (porcentajeDeIva * precioFinal / 100);
+    precioFinal = precioFinal + precioIva;
+
 
     alert("El precio final es: $" + precioFinal);
 
