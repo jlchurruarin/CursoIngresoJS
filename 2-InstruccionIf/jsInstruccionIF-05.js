@@ -11,13 +11,10 @@ function mostrar()
 	edadIngresada = document.getElementById("txtIdEdad").value;
 	edadIngresada = parseInt(edadIngresada);
 
-	if (edadIngresada < 13) 
+	if (edadIngresada < 13 || edadIngresada > 17) 
 	{
 		alert("No eres adolescente");
 	}
-	if (edadIngresada > 17) 
-	{
-		alert("No eres adolescente");
-	}
+
 
 }//FIN DE LA FUNCIÓN
