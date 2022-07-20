@@ -25,6 +25,7 @@ function CalcularPrecio ()
     cantidadIngresada = parseInt(cantidadIngresada);
     marcaSeleccionada = document.getElementById("Marca").value;
 
+    /* Versión con IFs
     if (cantidadIngresada > 5) {
         valorDescuentoAplicado = 50/100;                         // Guardamos el 50% de descuento para 6 lamparas o más
     } else if (cantidadIngresada == 5){
@@ -35,7 +36,7 @@ function CalcularPrecio ()
     } else if (cantidadIngresada == 4){
         valorDescuentoAplicado = 20/100;                         // Guardamos el 20% de descuento para 4 lamparas
         if(marcaSeleccionada == "ArgentinaLuz" || marcaSeleccionada == "FelipeLamparas") {
-            valorDescuentoAplicado = 25/100;                     // Guardamos el 25% de descuento para ArgentinaLuz o FelipreLamparas;
+            valorDescuentoAplicado = 25/100;                     // Guardamos el 25% de descuento para ArgentinaLuz o FelipeLamparas;
         }
     } else if(cantidadIngresada == 3) {
         valorDescuentoAplicado = 5/100;                          // Guardamos el 5% de descuento para 3 lamparas
@@ -44,6 +45,56 @@ function CalcularPrecio ()
         } else if (marcaSeleccionada == "FelipeLamparas") {
             valorDescuentoAplicado = 10/100;                     // Guardamos el 10% de descuento para FelipeLamparas y 3 lamparas
         }
+    }
+    */
+
+    // Versión con SWITCH
+    valorDescuentoAplicado = 50/100;                            // 50% de descuento por defecto (ya que verificaremos los casos de 5 lamparas o menos)
+    switch(cantidadIngresada) 
+    {
+        case 5:
+            switch(marcaSeleccionada) 
+            {
+                case "ArgentinaLuz":
+                    valorDescuentoAplicado=40/100;
+                    break;
+                default:
+                    valorDescuentoAplicado=30/100;
+                    break;
+            }
+            break;
+        case 4:
+            switch(marcaSeleccionada) 
+            {
+                case "ArgentinaLuz":
+                case "FelipeLamparas":
+                    valorDescuentoAplicado=25/100;
+                    break;
+                default:
+                    valorDescuentoAplicado=20/100;
+                    break;
+            }
+            break;
+        case 3:
+            switch(marcaSeleccionada) 
+            {
+                case "ArgentinaLuz":
+                    valorDescuentoAplicado=15/100;
+                    break;
+                case "FelipeLamparas":
+                    valorDescuentoAplicado=10/100;
+                    break;
+                default:
+                    valorDescuentoAplicado=5/100;
+                    break;
+            }
+            break;
+        case 2:
+        case 1:
+            valorDescuentoAplicado=0;
+            break;
+        default:
+
     }
 
     precioTotalLamparas = cantidadIngresada * precioPorLampara;
