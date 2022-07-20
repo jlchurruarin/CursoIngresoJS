@@ -24,6 +24,5 @@ function mostrar()
         alert("El triangulo no es rectangulo o su tamaño no es valido");
     }
 
-
-
 }
+dark
